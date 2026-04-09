@@ -18,12 +18,10 @@ jobs:
 
       #Dar permisos al script
       - name: Dar permisos
-        run: chmod +x gestion_productos.sh
-
-      #Ejecutar script
+        run: chmod +x tp-docker/gestion_productos.sh
       - name: Ejecutar script
-        run: ./gestion_productos.sh
-
+        run: ./tp-docker/gestion_productos.sh
+        
       #Ver estructura final
       - name: Mostrar estructura
         run: ls -R
