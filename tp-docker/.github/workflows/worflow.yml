@@ -1,7 +1,7 @@
 name: TP-DOCKER
 
 on:
-  workflow_dispatch:
+  workflow_dispatch
 
 jobs:
   ejecutar-script:
