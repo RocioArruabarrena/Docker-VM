@@ -1,0 +1,29 @@
+name: TP-DOCKER
+
+on:
+  workflow_dispatch
+
+jobs:
+  ejecutar-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      #Clonar repo
+      - name: Checkout del repositorio
+        uses: actions/checkout@v3
+
+      #Ver archivos
+      - name: Listar archivos
+        run: ls -la
+
+      #Dar permisos al script
+      - name: Dar permisos
+        run: chmod +x gestion_productos.sh
+
+      #Ejecutar script
+      - name: Ejecutar script
+        run: ./gestion_productos.sh
+
+      #Ver estructura final
+      - name: Mostrar estructura
+        run: ls -R
